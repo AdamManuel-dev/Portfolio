@@ -42,5 +42,5 @@ export const get = async (req: ExpressRequest, res: ExpressResponse): Promise<vo
 	console.log('VIEWS:', data.github)
 	tracking.addOneToCount(data.github)
 	
-	res.redirect('https://cloud.google.com/images/social-icon-google-cloud-1200-630.png')
+	res.redirect('https://avatars0.githubusercontent.com/u/68038126?s=1200&u=12789a08a9a537c026f89a75b5e0be1b03c00e01&v=4')
 };
