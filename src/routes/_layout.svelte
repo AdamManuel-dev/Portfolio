@@ -1,24 +1,20 @@
 <script context="module">
-  import type { Preload } from "@sapper/common";
-  export const preload = () => {};
+  export const preload: Preload.Preload = async function (this, page, session) {
+    return {};
+  };
 </script>
 
 <script>
+  import type { Preload } from "@sapper/common";
   import { stores } from "@sapper/app";
 
   let mini = true;
+
   function mouseenter() {
     mini = false;
   }
   function mouseleave() {
     mini = true;
-  }
-
-  let theme: "light" | "dark" = "dark";
-
-  function toggleTheme() {
-    if (theme === "light") theme = "dark";
-    else theme = "light";
   }
 
   // You may not want to use `segment`, but it is passed for the time being and will
@@ -31,17 +27,31 @@
 
   const { page } = stores();
 
-  let path: string;
-  $: path = $page.path.slice(1);
+  let _path: string;
+  $: _path = $page.path.slice(1);
 </script>
 
+<style>
+  .small {
+    @apply w-12;
+  }
+
+  .large {
+    @apply w-64;
+  }
+</style>
+
 <svelte:head>
-  <title>{path ? path.charAt(0).toUpperCase() + path.slice(1) : 'Index'}</title>
+  <title>
+    {_path ? _path.charAt(0).toUpperCase() + _path.slice(1) : 'Index'}
+  </title>
 </svelte:head>
 
 <div class="flex flex-row h-screen">
   <div
-    class="h-full bg-red-200 d-inline-block"
+    class="absolute h-full transition-all duration-150 ease-in-out bg-red-200 d-inline-block"
+    class:small="{mini}"
+    class:large="{!mini}"
     on:mouseenter="{mouseenter}"
     on:mouseleave="{mouseleave}"
   >
@@ -49,7 +59,7 @@
       MENU
     </pre>
   </div>
-  <div class="flex flex-col w-full">
+  <div class="flex flex-col w-full ml-12 bg-gray-200">
     <slot />
   </div>
 </div>
