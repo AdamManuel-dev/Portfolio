@@ -1,5 +1,11 @@
 {
 	"compilerOptions": {
+		"noImplicitThis": true,
+		"noEmitOnError": true,
+		"allowJs": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"importHelpers": true,
 		"lib": [
 			"DOM",
 			"ES2017",
