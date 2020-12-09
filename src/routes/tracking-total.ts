@@ -43,6 +43,7 @@ export const get = async (req: ExpressRequest, res: ExpressResponse): Promise<vo
     "schemaVersion": 1,
     "label": "views",
     "message": data.github.toString(),
-    "color": "blue"
+    "color": "blue",
+    "style": "for-the-badge"
   })
 };
