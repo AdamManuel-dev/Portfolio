@@ -25,7 +25,7 @@
 	"scripts": {
 		"eslint": "eslint",
 		"eslint:fix": "eslint --fix ./*.js ./src/*.ts ./src/components/**/*.svelte ./src/graphql/**/*.ts ./src/routes/**/*.svelte ./src/routes/**/*.ts",
-		"prettier": "prettier --write --svelte-sort-order scripts-markup-styles ./src/**/**.svelte",
+		"prettier": "prettier --write --svelte-sort-order scripts-styles-markup ./src/**/**.svelte",
 		"validate": "echo \"validate\"",
 		"validate:dev": "echo \"validate\"",
 		"--validate": "svelte-check --ignore src/node_modules/@sapper",
@@ -105,7 +105,6 @@
 		"svelte": "^3.29.7",
 		"svelte-check": "^1.1.13",
 		"svelte-dnd-action": "^0.6.22",
-		"svelte-materialify": "^0.3.4",
 		"svelte-preprocess": "^4.6.0",
 		"tailwindcss": "^2.0.1",
 		"tslib": "^2.0.3",

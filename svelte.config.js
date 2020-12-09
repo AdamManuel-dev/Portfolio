@@ -8,9 +8,7 @@ const createPreprocessors = ({ sourceMap }) => [
 			script: "typescript",
 			style: "postcss",
 		},
-		scss: {
-      includePaths: ['./src/theme'],
-    },
+		scss: {},
 		postcss,
 	}),
 	// You could have more preprocessors, like mdsvex

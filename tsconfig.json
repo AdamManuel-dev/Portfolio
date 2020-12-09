@@ -7,8 +7,7 @@
 		],
 		"baseUrl": ".",
 		"paths": {
-			"@sapper/*": ["runtime/src/*"],
-			"svelte-materialify/src": ["node_modules/svelte-materialify/@types"]
+			"@sapper/*": ["runtime/src/*"]
 		},
 		"target": "es2017",
 		"allowSyntheticDefaultImports": true,
@@ -18,7 +17,7 @@
 		"isolatedModules": true,
 		"moduleResolution": "node",
 		"sourceMap": true,
-		"strict": true,
+		"strict": false,
 		"types": [
 			"svelte"
 		],

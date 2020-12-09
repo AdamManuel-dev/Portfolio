@@ -1,29 +1,21 @@
 <script lang="ts">
-import ExampleComponent from "../components/ExampleComponent.svelte";
+  import ExampleComponent from "../components/ExampleComponent.svelte";
 
-import {
-  Button,
-  Card,
-  CardText,
-  CardActions,
-} from "svelte-materialify";
+  import { Button, Card, CardText, CardActions } from "svelte-materialify";
 
-let theme: "light" | "dark" = "dark";
+  let theme: "light" | "dark" = "dark";
 
-function toggleTheme() {
-  if (theme === "light") theme = "dark";
-  else theme = "light";
-}
+  function toggleTheme() {
+    if (theme === "light") theme = "dark";
+    else theme = "light";
+  }
 </script>
 
 <style>
-.centerer {
-  @apply flex-1 flex flex-col items-center justify-center;
-}
+  .centerer {
+    @apply flex-1 flex flex-col items-center justify-center;
+  }
 </style>
-
-
-
 
 <div class:centerer="{true}">
   <!-- Here's how you could extract conditional class groups with @apply -->
@@ -40,8 +32,8 @@ function toggleTheme() {
         <br />
       </div>
       <CardText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Reprehenderit, qui quaerat rerum incidunt nisi ducimus?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit,
+        qui quaerat rerum incidunt nisi ducimus?
       </CardText>
       <CardActions>
         <Button rounded outlined>Button</Button>
