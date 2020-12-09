@@ -42,7 +42,7 @@ export const get = async (req: ExpressRequest, res: ExpressResponse): Promise<vo
 	res.json({
     "schemaVersion": 1,
     "label": "views",
-    "message": data,
+    "message": data.github,
     "color": "blue"
   })
 };
